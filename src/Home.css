@@ -1,0 +1,382 @@
+/* Home.css */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://via.placeholder.com/1920x1080'); /* Cambia esta URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra todo el contenido horizontalmente */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    margin-left: 25px; /* Ajusta el logo hacia el centro */
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Contenedor de la barra de búsqueda */
+.search-container {
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px 20px;
+    background-color: #007bff; /* Fondo blanco */
+    border-bottom: 1px solid #007bff; /* Línea debajo */
+}
+
+/* Estilo del buscador */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9; /* Fondo gris claro */
+    border: 1px solid #ddd; /* Borde gris */
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 35%; /* Ancho del buscador */
+    max-width: 400px; /* Máximo ancho */
+    margin-left: 200px;
+}
+
+/* Input del buscador */
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: #333;
+    background-color: transparent; /* Fondo transparente */
+    padding-left: 5px;
+}
+
+/* Icono de búsqueda */
+.search-icon {
+    font-size: 1.2rem; /* Tamaño adecuado del icono */
+    color: #888;
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+
+/* Contenedor de las opciones de filtro */
+.filter-options {
+    display: flex;
+    gap: 15px; /* Espaciado entre los elementos */
+    position: relative; /* Contenedor relativo para que los dropdowns se alineen bien */
+}
+
+/* Links de las opciones de filtro */
+.filter-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center; /* Centra el texto y el icono verticalmente */
+    gap: 5px; /* Espaciado entre el texto y el icono */
+}
+
+.filter-link span {
+    font-size: 1rem; /* Asegura que el tamaño del ícono sea consistente */
+    color: #007bff; /* Asegura que el color del ícono sea consistente */
+}
+
+/* Hover en los filtros */
+.filter-link:hover {
+    color: #0056b3; /* Azul oscuro al pasar el ratón */
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Contenedor del enlace de usuario */
+.user-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Enlace de usuario */
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre el ícono y el texto */
+}
+
+/* Ícono del usuario */
+.user-icon {
+    font-size: 1.2rem; /* Tamaño del ícono */
+    color: #333; /* Color del ícono */
+}
+/* Dropdown */
+.dropdown {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+    gap: 20px; /* Espaciado entre marcas */
+    position: absolute;
+    z-index: 2000;
+    width: 45%; /* Reduce el ancho total */
+    border-radius: 5px; /* Bordes redondeados */
+    right: 230px;
+}
+
+
+/* Cada bloque de marca */
+.dropdown-item {
+    flex: 1 1 200px;
+}
+
+/* Lista de modelos */
+.dropdown-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.dropdown-item ul li {
+    margin: 5px 0;
+    color: #333;
+    font-size: 0.9rem;
+}
+/* Contenedor de cada bloque de marca */
+.dropdown-item {
+    display: flex;
+    flex-direction: column; /* Asegura que el texto esté debajo del icono */
+    align-items: center; /* Centra los elementos en el eje horizontal */
+    flex: 1 1 200px;
+}
+
+/* Imagen de la marca */
+.brand-logo {
+    width: 50px; /* Tamaño fijo para las imágenes */
+    height: 50px; /* Tamaño fijo para las imágenes */
+    object-fit: contain; /* Ajusta las imágenes al contenedor sin deformarlas */
+    margin-bottom: 5px; /* Espaciado entre la imagen y el texto */
+}
+
+/* Texto de la marca */
+.brand-header strong {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+} 
+/* Dropdown general para tipo */
+.type-dropdown {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2000;
+    right: 150px;
+    border-radius: 5px;
+}
+
+/* Lista de opciones específicas para tipo */
+.type-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Elementos de la lista específicos para tipo */
+.type-dropdown ul li {
+    display: flex;
+    align-items: center; /* Centrar ícono y texto */
+    gap: 10px; /* Espaciado entre ícono y texto */
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover sobre las opciones de tipo */
+.type-dropdown ul li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo de los íconos específicos para tipo */
+.type-icon {
+    width: 24px; /* Tamaño del ícono */
+    height: 24px;
+    object-fit: contain; /* Asegura que los íconos no se deformen */
+}
+
+/* Dropdown general para ubicación */
+.location-dropdown {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2000;
+    right: 30px;
+    border-radius: 5px;
+}
+
+/* Lista de opciones específicas para ubicación */
+.location-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Elementos de la lista específicos para ubicación */
+.location-dropdown ul li {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover sobre las opciones de ubicación */
+.location-dropdown ul li:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+.carousel-slide {
+    text-align: center;
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-slide h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.carousel-slide p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.carousel-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.carousel-button.prev {
+    left: -50px;
+}
+
+.carousel-button.next {
+    right: -50px;
+}
+
+.carousel-button:hover {
+    color: #007bff;
+}
