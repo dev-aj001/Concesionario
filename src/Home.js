@@ -5,10 +5,48 @@ import React, { useState } from 'react';
 
 const Home = () => {
     const [activeDropdown, setActiveDropdown] = useState(null); // Controla qué dropdown está abierto
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     const toggleDropdown = (dropdown) => {
         setActiveDropdown(activeDropdown === dropdown ? null : dropdown); // Cierra si está abierto o abre el nuevo
     };
+    const slides = [
+        {
+          img: "https://th.bing.com/th/id/R.75a1d8918d9348aa19a51a2f7c8efd63?rik=lWNlRn3ImhXPzA&pid=ImgRaw&r=0",
+          title: "Toyota Corolla 2023",
+          description: "Compacto, eficiente y confiable. Ideal para la ciudad y carretera.",
+        },
+        {
+          img: "https://th.bing.com/th/id/R.2bdddedb36881edbe2d5fd8d488c702a?rik=Th31QlmWeDum0g&pid=ImgRaw&r=0",
+          title: "Ford F-150 2023",
+          description: "Potencia y rendimiento para cualquier trabajo. Líder en camionetas.",
+        },
+        {
+          img: "https://th.bing.com/th/id/OIP.xi7hl-8devzXWoQfJ8gaQwHaE8?rs=1&pid=ImgDetMain",
+          title: "Honda Civic 2023",
+          description: "Diseño moderno, alto rendimiento y gran seguridad.",
+        },
+        {
+          img: "https://th.bing.com/th/id/OIP.2Lvp6IVo6ErWjzEWh8TZUwHaEH?rs=1&pid=ImgDetMain",
+          title: "Chevrolet Tahoe 2023",
+          description: "SUV espaciosa y cómoda para toda la familia.",
+        },
+        {
+          img: "https://th.bing.com/th/id/OIP.XPGJlrJEBYa5WxqMkwhdfgHaFj?rs=1&pid=ImgDetMain",
+          title: "Tesla Model 3 2023",
+          description: "Eléctrico, innovador y amigable con el medio ambiente.",
+        },
+      ];
+      
+
+    const handleNext = () => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      };
+    
+      const handlePrev = () => {
+        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+      };
+    
 
     return (
         <div className="container">
@@ -23,7 +61,7 @@ const Home = () => {
                         <nav className="nav">
                             <a href="#!" className="nav-link">Compra un auto</a>
                             <a href="#!" className="nav-link">Vende tu auto</a>
-                            <a href="#!" className="nav-link">Nosotros</a>
+                            <a href="/Ventanas/Nosotros/nosotros.js" className="nav-link">Nosotros</a>
                             <a href="#!" className="nav-link">
                                 <FontAwesomeIcon icon={faUserCircle} className="user-icon" />
                                 Ingresar
@@ -165,24 +203,26 @@ const Home = () => {
 
                 {/* Carrusel */}
                 <div className="carousel">
-                    <h2>Razones para ser cliente de TECAR</h2>
-                    <div className="carousel-items">
-                        <div className="carousel-item">
-                            <img src="/path/to/image1.jpg" alt="Imagen 1" />
-                            <h3>¡Autos nuevos y seminuevos te esperan!</h3>
-                            <p>Tenemos un catálogo con miles de opciones a precios competitivos.</p>
+                    <button className="carousel-button prev" onClick={handlePrev}>
+                    ❮
+                    </button>
+                    <div
+                    className="carousel-track"
+                    style={{
+                        transform: `translateX(-${currentSlide * 102}%)`,
+                    }}
+                    >
+                    {slides.map((slide, index) => (
+                        <div className="carousel-slide" key={index}>
+                        <img src={slide.img} alt={slide.title} />
+                        <h3>{slide.title}</h3>
+                        <p>{slide.description}</p>
                         </div>
-                        <div className="carousel-item">
-                            <img src="/path/to/image2.jpg" alt="Imagen 2" />
-                            <h3>Prueba por 7 días o hasta 300 km</h3>
-                            <p>¿No te convence? Cámbialo por otro auto sin problemas.</p>
-                        </div>
-                        <div className="carousel-item">
-                            <img src="/path/to/image3.jpg" alt="Imagen 3" />
-                            <h3>Certificamos todos nuestros autos</h3>
-                            <p>Revisamos mecánica, estética y documentación para tu seguridad.</p>
-                        </div>
+                    ))}
                     </div>
+                    <button className="carousel-button next" onClick={handleNext}>
+                    ❯
+                    </button>
                 </div>
             </div>
         </div>
