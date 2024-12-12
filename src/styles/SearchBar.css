@@ -1,0 +1,43 @@
+/* Contenedor de la barra de búsqueda */
+.search-container {
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px 20px;
+    background-color: #007bff; /* Fondo blanco */
+    border-bottom: 1px solid #007bff; /* Línea debajo */
+}
+
+/* Estilo del buscador */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9; /* Fondo gris claro */
+    border: 1px solid #ddd; /* Borde gris */
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 35%; /* Ancho del buscador */
+    max-width: 400px; /* Máximo ancho */
+    margin-left: 200px;
+}
+
+/* Input del buscador */
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: #333;
+    background-color: transparent; /* Fondo transparente */
+    padding-left: 5px;
+}
+
+/* Icono de búsqueda */
+.search-icon {
+    font-size: 1.2rem; /* Tamaño adecuado del icono */
+    color: #888;
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+

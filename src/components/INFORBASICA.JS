@@ -1,4 +1,3 @@
-import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
@@ -209,7 +208,7 @@ const Home = () => {
                     <div
                     className="carousel-track"
                     style={{
-                        transform: `translateX(-${currentSlide * 102}%)`,
+                        transform: translateX(-${currentSlide * 102}%),
                     }}
                     >
                     {slides.map((slide, index) => (

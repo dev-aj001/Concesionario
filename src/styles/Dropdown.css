@@ -1,0 +1,78 @@
+/* Contenedor principal del dropdown */
+.dropdown {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex; /* Cambiar a diseño horizontal */
+    justify-content: space-around; /* Espaciado uniforme entre marcas */
+    align-items: flex-start;
+    gap: 20px; /* Espaciado entre cada bloque */
+    position: absolute;
+    z-index: 2000;
+    width: 90%; /* Ajusta el ancho */
+    border-radius: 8px;
+    right: 5%; /* Centrado horizontal */
+    transition: all 0.3s ease;
+}
+
+/* Estilo para cada bloque de marca */
+.dropdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar contenido */
+    gap: 10px;
+}
+
+/* Estilo de los logos */
+.brand-logo {
+    width: 100px; /* Tamaño uniforme */
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Nombre de la marca */
+.brand-header strong {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Lista de modelos */
+.dropdown-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.dropdown-item ul li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.dropdown-item ul li:hover {
+    color: #007bff; /* Color destacado */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .dropdown {
+        flex-direction: column; /* Cambiar a diseño vertical en pantallas pequeñas */
+        align-items: center;
+        gap: 30px;
+    }
+
+    .brand-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .brand-header strong {
+        font-size: 1rem;
+    }
+}

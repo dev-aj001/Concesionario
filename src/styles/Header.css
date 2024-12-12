@@ -1,0 +1,69 @@
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    height: 50px;
+    margin: 0 auto; /* Centra todo el contenido horizontalmente */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    margin-left: 25px; /* Ajusta el logo hacia el centro */
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Contenedor de las opciones de filtro */
+.filter-options {
+    display: flex;
+    gap: 15px; /* Espaciado entre los elementos */
+    position: relative; /* Contenedor relativo para que los dropdowns se alineen bien */
+}
+
+/* Links de las opciones de filtro */
+.filter-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center; /* Centra el texto y el icono verticalmente */
+    gap: 5px; /* Espaciado entre el texto y el icono */
+}
+
+.filter-link span {
+    font-size: 1rem; /* Asegura que el tamaño del ícono sea consistente */
+    color: #007bff; /* Asegura que el color del ícono sea consistente */
+}
+
+/* Hover en los filtros */
+.filter-link:hover {
+    color: #0056b3; /* Azul oscuro al pasar el ratón */
+}
